@@ -4,6 +4,11 @@
   "description": "an app for quick todo lists",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:server": "nodemon server.js",
+    "dev:client": "npm start --prefix client",
+    "build": "npm run build --prefix client",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
